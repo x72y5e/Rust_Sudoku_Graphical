@@ -74,7 +74,7 @@ impl Gameboard {
                 let r = tx1.send(b);
                 match r {
                     Ok(_) => {},
-                    Err(e) => {}, //println!("{}", e),
+                    Err(_) => {}, //println!("{}", e),
                 }
             });
         }
