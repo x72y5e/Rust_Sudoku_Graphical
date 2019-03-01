@@ -75,7 +75,7 @@ pub fn search(mut board: Array2<u8>, shared: &AtomicBool, i: u8) -> Option<(Arra
         permutations.shuffle(&mut thread_rng());
         for permutation in &permutations {
             if counter % 500 == 0 && shared.load(atomic::Ordering::Relaxed) {
-                println!("thread {} stopping...", i);
+                //println!("thread {} stopping...", i);
                 return None
             }
 
